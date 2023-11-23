@@ -23,7 +23,7 @@ void CandidateList::addCandidate(const CandidateType& candidate) {
 
     count++;
 }
-}
+
 int CandidateList::getWinner(CandidateType candidate) // come back to check the if else later
 {
 
