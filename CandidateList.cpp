@@ -8,9 +8,21 @@ CandidateList::CandidateList()
     last = nullptr;
     count = 0;
 }
-void CandidateList::addCandidate()
-{
 
+void CandidateList::addCandidate(const CandidateType& candidate) {
+    Node* newNode = new Node(candidate, nullptr);
+
+    if (count == 0) {
+        first = newNode;
+        last = newNode;
+    }
+    else {
+        last->setLink(newNode);
+        last = newNode;
+    }
+
+    count++;
+}
 }
 int CandidateList::getWinner(CandidateType candidate) // come back to check the if else later
 {
