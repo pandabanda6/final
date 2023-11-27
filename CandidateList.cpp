@@ -1,5 +1,6 @@
 #include "CandidateList.h"
-
+#include "PersonType.h"
+#include "Node.h"
 
 
 CandidateList::CandidateList()
@@ -9,7 +10,8 @@ CandidateList::CandidateList()
     count = 0;
 }
 
-void CandidateList::addCandidate(const CandidateType& candidate) {
+void CandidateList::addCandidate(const CandidateType& candidate) 
+{
     Node* newNode = new Node(candidate, nullptr);
 
     if (count == 0) {
@@ -52,18 +54,52 @@ int CandidateList::getWinner(CandidateType candidate) // come back to check the 
     return winnerSSN;
 }
 
-void CandidateList::searchCandidate()
+  
+
+#include "CandidateList.h"
+#include "PersonType.h"
+#include "Node.h"
+
+CandidateList::CandidateList()
+{
+    first = nullptr;
+    last = nullptr;
+    count = 0;
+}
+
+// ... other functions ...
+
+bool CandidateList::searchCandidate(int SSN)
 {
     if (count == 0)
     {
         cout << "=> List is empty\n";
-
+        return false;
     }
-    else
+
+    Node* current = first;
+
+    while (current)
     {
+        if (current->getCandidate().getSSN() == SSN)
+        {
+            // Candidate with the specified SSN found
+            cout << "Candidate found:\n";
+            cout << "SSN: " << current->getCandidate().getSSN() << "\n";
+            cout << "Name: " << current->getCandidate().getName() << "\n";
+            return true; // Candidate found, return true
+        }
 
+        current = current->getLink();
     }
+
+    // Candidate not found
+    cout << "=> SSN not in the list\n";
+    return false;
 }
+
+
+
 void CandidateList::printCandidateName(int SSN)
 {
     if (count == 0)
