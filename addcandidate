@@ -1,0 +1,4 @@
+Traverse the list to print all candidates using the
+printCandidateInfo function of the CandidatetType class.
+If the list is empty, output the error message “=> List
+is empty.”
