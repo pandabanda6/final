@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 #ifndef CANDIDATELIST_H
 #define CANDIDATELIST_H
 #include<string>
@@ -11,20 +10,20 @@ using namespace std;
 class CandidateList// : public Node
 {
 private:
-    Node* first;
-    Node* last;
-    int count;
+	Node* first;
+	Node* last;
+	int count;
 public:
-    CandidateList();
-    void addCandidate();
-    int getWinner(CandidateType candidate);
-    void searchCandidate();
-    void printCandidateName(int SSN);
-    void printAllCandidate();
-    void printCandidateCampusVotes();
-    void printCandidateTotalVotes();
-    void desrtoyList();
-    ~CandidateList();
+	CandidateList();
+	void addCandidate(const CandidateType& candidate);
+	int  getWinner(CandidateType candidate);
+	bool searchCandidate(int SSN);
+	void printCandidateName(int SSN);
+	void printAllCandidate();
+	void printCandidateCampusVotes(int SSN);
+	void printCandidateTotalVotes(int SSN);
+	void desrtoyList();
+	~CandidateList();
 };
 
 #endif
