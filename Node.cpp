@@ -1,30 +1,30 @@
 #include "Node.h"
 #include <iostream>
 
-Node::Node() : link(nullptr)
+Node:: Node() : link(nullptr) 
 {
-
+	
 }
-Node::Node(const CandidateType& votes, Node* theLink) : candidate(votes), link(theLink)
+Node:: Node(const CandidateType& votes, Node* theLink) : candidate(votes), link(theLink)
 {
-
+	
 }
-Node* Node::getLink() const
+Node* Node::getLink() const 
 {
-    return link;
+	return link;
 }
 CandidateType Node::getCandidate() const
 {
-    return candidate;
+	return candidate;
 }
 void Node::setCandidate(const CandidateType& votes)
 {
-    candidate = votes;
+	candidate = votes; 
 }
 void  Node::setLink(Node* theLink)
 {
-    link = theLink;
+	link = theLink;
 }
-Node:: ~Node()
+Node:: ~Node() 
 {
 }
