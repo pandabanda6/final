@@ -1,11 +1,10 @@
-#pragma once
-#ifndef CANDIDATETYPE_H
 #define CANDIDATETYPE_H
 
 #include "PersonType.h"
 const int NUM_OF_CAMPUSES = 4;
 
-class CandidateType : public PersonType {
+class CandidateType : public PersonType 
+{
 
 private:
     int totalVotes;
