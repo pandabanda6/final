@@ -1,8 +1,8 @@
 #pragma once
-#ifndef PERSONTYPE_H
-#define PERSONTYPE_H
+#ifndef PersonType_H
+#define PersonType_H
 
-#include <string>
+#include<string>
 
 class PersonType {
 
@@ -16,6 +16,7 @@ public:
     PersonType(std::string fName, std::string lName, int SSN); // Overloaded Constructor
 
     // Member functions
+    void setPersonInfo(std::string newfName, std::string newlName, int newSSN);
     std::string getFirstName() const;
     std::string getLastName() const;
     int getSSN() const;
@@ -27,3 +28,4 @@ public:
 };
 
 #endif
+
