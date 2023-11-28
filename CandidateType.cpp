@@ -1,18 +1,21 @@
-
 #include "CandidateType.h"
 #include <iostream>
 
-CandidateType::CandidateType() {
+CandidateType::CandidateType() 
+{
     totalVotes = 0;
-    for (int i = 0; i < NUM_OF_CAMPUSES; i++) {
+    for (int i = 0; i < NUM_OF_CAMPUSES; i++) 
+    {
         campusVotes[i] = 0; // Initialize all campus votes to 0, 
         //i will be 0,1,2,3 for the array's index
     }
 }
 
-CandidateType::CandidateType(std::string fName, std::string lName, int SSN) : PersonType(fName, lName, SSN) {
+CandidateType::CandidateType(std::string fName, std::string lName, int SSN) : PersonType(fName, lName, SSN) 
+{
     totalVotes = 0;
-    for (int i = 0; i < NUM_OF_CAMPUSES; i++) {
+    for (int i = 0; i < NUM_OF_CAMPUSES; i++)
+    {
         campusVotes[i] = 0; // Initialize all campus votes to 0
         // This function is different from the one above. 
         //It links Person information from the PersonType file with the votes in this file
@@ -30,7 +33,8 @@ void CandidateType::updateVotesByCampus(int campusNum, int newVote) {
 //campusVotes[campusNum - 1] += newVote:
 //    For example, if campusNum is 2, the index in the array is campusVotes[campusNum - 1] (2-1),  
 
-int CandidateType::getTotalVotes() const {
+int CandidateType::getTotalVotes() const 
+{
     return totalVotes;
 }
 
@@ -59,9 +63,8 @@ void CandidateType::printCandidateCampusVotes(int campusNum) const {
     }
 }
 
-CandidateType::~CandidateType() {
+CandidateType::~CandidateType()
+{
+
+
 }
-
-
-
-
